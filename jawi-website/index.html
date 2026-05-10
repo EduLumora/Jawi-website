@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>37 Huruf Jawi</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      background: #f2EBE2;
+      margin: 0;
+      padding: 20px;
+    }
+
+       h1 {
+      color: #333;
+      font-size: 40px;
+    }
+
+    p {
+      font-size: 18px; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(6, 80px);
+      justify-content: center;
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .huruf {
+      background: beige;
+      padding: 20px;
+      font-size: 32px;
+      border-radius: 15px;
+      cursor: pointer;
+      box-shadow: 0 5px 8px rgba(0,0,0,0.2);
+      transition: 0.2s;
+    }
+
+    .huruf:active {
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>Belajar 30 Huruf Jawi </h1>
+<p>Klik huruf untuk dengar bunyi</p>
+
+<div class="grid">
+
+  <!-- 28 Huruf Arab -->
+  <div class="huruf" onclick="playSound('audio/alif.mp3')">ا</div>
+  <div class="huruf" onclick="playSound('audio/ba.mp3')">ب</div>
+  <div class="huruf" onclick="playSound('audio/ta.mp3')">ت</div>
+  <div class="huruf" onclick="playSound('audio/tha.mp3')">ث</div>
+  <div class="huruf" onclick="playSound('audio/jim.mp3')">ج</div>
+  <div class="huruf" onclick="playSound('audio/ha.mp3')">ح</div>
+  <div class="huruf" onclick="playSound('audio/kha.mp3')">خ</div>
+  <div class="huruf" onclick="playSound('audio/dal.mp3')">د</div>
+  <div class="huruf" onclick="playSound('audio/dhal.mp3')">ذ</div>
+  <div class="huruf" onclick="playSound('audio/ra.mp3')">ر</div>
+  <div class="huruf" onclick="playSound('audio/za.mp3')">ز</div>
+  <div class="huruf" onclick="playSound('audio/sin.mp3')">س</div>
+  <div class="huruf" onclick="playSound('audio/shin.mp3')">ش</div>
+  <div class="huruf" onclick="playSound('audio/sad.mp3')">ص</div>
+  <div class="huruf" onclick="playSound('audio/dad.mp3')">ض</div>
+  <div class="huruf" onclick="playSound('audio/ta2.mp3')">ط</div>
+  <div class="huruf" onclick="playSound('audio/za2.mp3')">ظ</div>
+  <div class="huruf" onclick="playSound('audio/ain.mp3')">ع</div>
+  <div class="huruf" onclick="playSound('audio/ghain.mp3')">غ</div>
+  <div class="huruf" onclick="playSound('audio/fa.mp3')">ف</div>
+  <div class="huruf" onclick="playSound('audio/qaf.mp3')">ق</div>
+  <div class="huruf" onclick="playSound('audio/kaf.mp3')">ك</div>
+  <div class="huruf" onclick="playSound('audio/lam.mp3')">ل</div>
+  <div class="huruf" onclick="playSound('audio/mim.mp3')">م</div>
+  <div class="huruf" onclick="playSound('audio/nun.mp3')">ن</div>
+  <div class="huruf" onclick="playSound('audio/waw.mp3')">و</div>
+  <div class="huruf" onclick="playSound('audio/ha2.mp3')">ه</div>
+  <div class="huruf" onclick="playSound('audio/ya.mp3')">ي</div>
+
+  <!-- Huruf tambahan Jawi -->
+  <div class="huruf" onclick="playSound('audio/hamzah.mp3')">ء</div>
+  <div class="huruf" onclick="playSound('audio/lam alif.mp3')">لا</div>
+
+
+</div>
+
+<audio id="audioPlayer"></audio>
+
+<script>
+function playSound(file) {
+  let audio = document.getElementById("audioPlayer");
+  audio.src = file;
+  audio.play();
+}
+</script>
+
+</body>
+</html
